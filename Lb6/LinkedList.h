@@ -102,6 +102,12 @@ public:
 	}
 	
 	LinkedListNode<T>* removeLast() {
+		if (_count == 0) {
+			system("cls");
+			std::cout << "Don`t have any numbers\n";
+			system("pause");
+			return 0;
+		}
 		LinkedListNode<T>* removedNode = _last; 
 		if (_count == 1) {
 			_first = nullptr;
