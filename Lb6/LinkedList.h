@@ -14,17 +14,7 @@ public:
 	int getCount() const {
 		return _count;
 	}
-	int getNumberByCondition(std::function<bool(int)> condition) const {
-		int number = 0;
-		LinkedListNode<T>* next = _first;
-		while (next != nullptr) {
-			if (condition(next->Value)) {
-				number++;
-			}
-			next = next->NextNode;
-		}
-		return number;
-	}
+
 
 	LinkedListNode<T>* getFirst() const {
 		return _first;
